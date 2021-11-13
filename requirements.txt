@@ -1,1 +1,4 @@
+altgraph==0.17.2
 cx-Oracle==8.3.0
+pyinstaller==4.7
+pyinstaller-hooks-contrib==2021.3
