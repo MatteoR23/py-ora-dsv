@@ -1,0 +1,17 @@
+{
+    "host": "localhost",
+    "port": 1521,
+    "service": "servname",
+    "user": "usr",
+    "password": "pwd",
+    "conf": [
+        {
+            "source_path": "/home/matteo",
+            "source_sql": "test.sql",
+            "output_file": "test.dsv",
+            "output_path":"/home/matteo",
+            "separator": ";",
+            "lineTerminator": "\r\n"
+        }
+    ]
+}
