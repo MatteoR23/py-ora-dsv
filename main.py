@@ -2,7 +2,7 @@ from settings import config
 import csv
 import cx_Oracle
 
-connString = f'{config["user"]}/{config["password"]}@{config["host"]}:{}/{config["service"]}'
+connString = f'{config["user"]}/{config["password"]}@{config["host"]}:{config["port"]}/{config["service"]}'
 
 def getSqlFileContent(conf):
     with open(conf["source_sql"], "r") as f:
