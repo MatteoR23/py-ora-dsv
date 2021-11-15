@@ -1,12 +1,14 @@
 from settings import config
 import csv
 import cx_Oracle
+import os
 
 connString = f'{config["user"]}/{config["password"]}@{config["host"]}:{config["port"]}/{config["service"]}'
 
 def getSqlFileContent(conf):
-    with open(conf["source_sql"], "r") as f:
-        return f.readlines()
+    sourcePath = os.path.join(conf["source_path"], conf["source_sql"])
+    with open(sourcePath, "r") as f:
+        return f.read()
 
 def generateCsvFromOracle(conf):
     import os
@@ -14,7 +16,7 @@ def generateCsvFromOracle(conf):
 
     con = cx_Oracle.connect(connString)
     cursor = con.cursor()
-    csv_file = open(os.path.join(conf["path"], conf["outputfile"]), "w")
+    csv_file = open(os.path.join(conf["output_path"], conf["output_file"]), "w")
     writer = csv.writer(csv_file, delimiter=conf["separator"], lineterminator=conf["lineTerminator"], quoting=csv.QUOTE_NONNUMERIC)
     
     r = cursor.execute(sql)
