@@ -13,7 +13,7 @@ requirements:
 First of all, activate your venv
 Install all dependencies:
 
-pip install -r requirements.txt
+pip install -r ./requirements.txt
 
 python main.py
 
