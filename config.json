@@ -1,13 +1,13 @@
 {
-    "host": "dbMS1s8-scan.generali.it",
+    "host": "localhost",
     "port": 1521,
-    "service": "MS1s8_MS1_default.generali.it",
+    "service": "service",
     "conf": [
         {
-            "source_path": "C:\\Users\\rosada matteo",
+            "source_path": "C:\\",
             "source_sql": "test.sql",
             "output_file": "test.dsv",
-            "output_path": "C:\\Users\\rosada matteo",
+            "output_path": "C:\\",
             "separator": ";",
             "lineTerminator": "\n"
         }
